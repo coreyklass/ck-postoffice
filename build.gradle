@@ -1,0 +1,38 @@
+
+// https://rabbitmq.github.io/rabbitmq-java-client/api/4.x.x/
+
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.5'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    compile "com.fasterxml.jackson.core:jackson-core:2.9.2"
+    compile "com.fasterxml.jackson.core:jackson-annotations:2.9.2"
+    compile "com.fasterxml.jackson.core:jackson-databind:2.9.2"
+
+    compile "com.rabbitmq:amqp-client:4.1.0"
+
+    compile "org.codehaus.groovy:groovy-backports-compat23:2.4.5"
+
+    compile "com.orhp.cf-event-gateway:cf-event-gateway:1.0"
+
+}
+
+test {
+    useJUnitPlatform()
+}
